@@ -209,6 +209,14 @@ a{text-decoration:none;color:inherit}
   font-size:0.78rem;color:var(--accent);font-weight:600;
 }
 .social-badge svg{width:14px;height:14px;stroke:var(--accent);fill:none;stroke-width:2}
+.credential{
+  display:flex;align-items:center;gap:12px;
+  margin-top:1.5rem;padding:12px 18px;border-radius:10px;
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);
+  width:fit-content;
+}
+.credential-logo{width:32px;height:32px;object-fit:contain;flex-shrink:0;background:#fff;border-radius:4px;padding:2px}
+.credential span{font-size:0.85rem;color:var(--gray-300);font-weight:500}
 
 /* ===== FEATURES ===== */
 .feat-sec{padding:6rem 2rem;background:rgba(255,255,255,0.01)}
@@ -312,6 +320,7 @@ footer{padding:3rem 2rem 2rem;border-top:1px solid rgba(255,255,255,0.05);max-wi
   .ft-grid{grid-template-columns:1fr;gap:2rem}
   .ft-bottom{flex-direction:column;gap:0.5rem;text-align:center}
   .social-badges{justify-content:center}
+  .credential{margin:1.5rem auto 0}
 }
 @media(max-width:480px){
   .hero{padding:8rem 1.25rem 3rem}
@@ -452,6 +461,10 @@ footer{padding:3rem 2rem 2rem;border-top:1px solid rgba(255,255,255,0.05);max-wi
           <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           지속 가능한 성장
         </span>
+      </div>
+      <div class="credential">
+        <img src="paju_logo.svg" alt="파주시" class="credential-logo">
+        <span>2025 파주시 사회적경제 창업 지원사업 선정</span>
       </div>
     </div>
   </div>
@@ -604,6 +617,7 @@ footer{padding:3rem 2rem 2rem;border-top:1px solid rgba(255,255,255,0.05);max-wi
       <h5>Contact</h5>
       <a href="mailto:aidexlab@gmail.com">aidexlab@gmail.com</a>
       <a href="https://aidexlab.org">aidexlab.org</a>
+      <span style="display:block;font-size:0.82rem;color:var(--gray-500);padding-top:8px;line-height:1.5">파주시 금정로45, 금촌어울림센터 3층</span>
     </div>
   </div>
   <div class="ft-bottom">
