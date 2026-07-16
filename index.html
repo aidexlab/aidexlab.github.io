@@ -165,6 +165,7 @@ a{text-decoration:none;color:inherit}
 .ps-pct{font-size:0.6rem;color:var(--gray-500);font-weight:600}
 
 .fl{
+  transition:opacity .45s ease;
   position:absolute;padding:8px 14px;border-radius:12px;
   background:var(--bg-card);border:1px solid rgba(255,255,255,0.07);
   box-shadow:0 8px 32px rgba(0,0,0,0.3);
@@ -174,6 +175,7 @@ a{text-decoration:none;color:inherit}
 .fl-1{top:12%;right:-8%;animation-delay:0s}
 .fl-2{bottom:28%;left:-14%;animation-delay:1.5s}
 .fl-3{bottom:8%;right:-5%;animation-delay:3s}
+.fl.fading{opacity:0}
 
 /* ===== STATS ===== */
 .stats{
@@ -449,7 +451,14 @@ footer{padding:3rem 2rem 2rem;border-top:1px solid rgba(255,255,255,0.05);max-wi
     #pioneer-pass .pp-wrap{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:center;justify-content:center;}
     #pioneer-pass .pp-left{flex:1 1 440px;min-width:300px;color:#fff;}
     #pioneer-pass .pp-right{flex:0 1 380px;min-width:300px;display:flex;justify-content:center;position:relative;align-self:flex-end;}
-    #pioneer-pass .pp-peek{position:absolute;top:-96px;right:44px;width:118px;height:auto;transform:rotate(6deg);z-index:0;filter:drop-shadow(0 6px 10px rgba(10,5,30,.3));}
+    #pioneer-pass .pp-peek{position:absolute;top:-96px;right:44px;width:118px;height:auto;z-index:0;filter:drop-shadow(0 6px 10px rgba(10,5,30,.3));opacity:0;transform:translateY(50px) rotate(2deg);}
+    #pioneer-pass.visible .pp-peek{animation:ppRise .9s cubic-bezier(.34,1.56,.64,1) .55s both;}
+    @keyframes ppRise{from{opacity:0;transform:translateY(50px) rotate(2deg);}to{opacity:1;transform:translateY(0) rotate(6deg);}}
+    #pioneer-pass .pp-bob{animation:ppBob 4.5s ease-in-out 1.6s infinite;transform-origin:50% 62%;}
+    @keyframes ppBob{0%,100%{transform:translateY(0) rotate(0deg);}30%{transform:translateY(-5px) rotate(-2deg);}62%{transform:translateY(2px) rotate(1.5deg);}}
+    #pioneer-pass .pp-eye{transform-box:fill-box;transform-origin:center;animation:ppBlink 4s ease-in-out 2s infinite;}
+    @keyframes ppBlink{0%,91%,100%{transform:scaleY(1);}94%,96%{transform:scaleY(.08);}}
+    @media (prefers-reduced-motion:reduce){#pioneer-pass .pp-peek{animation:none;opacity:1;transform:rotate(6deg);}#pioneer-pass .pp-bob,#pioneer-pass .pp-eye{animation:none;}}
     #pioneer-pass .pp-badge{display:inline-block;background:rgba(255,211,77,.15);border:1px solid #FFD34D;color:#FFD34D;font-size:12px;font-weight:800;letter-spacing:2px;border-radius:99px;padding:6px 16px;text-transform:uppercase;}
     #pioneer-pass h2{font-size:38px;font-weight:800;line-height:1.2;margin:18px 0 6px;color:#fff;}
     #pioneer-pass .pp-sub{font-size:17px;color:#d8c9f7;line-height:1.6;margin-bottom:8px;}
@@ -528,6 +537,7 @@ footer{padding:3rem 2rem 2rem;border-top:1px solid rgba(255,255,255,0.05);max-wi
             <stop offset="100%" stop-color="#8465d6"/>
           </radialGradient>
         </defs>
+        <g class="pp-bob">
         <!-- ears -->
         <ellipse cx="21" cy="112" rx="17" ry="24" fill="#6d3ee0"/>
         <ellipse cx="179" cy="112" rx="17" ry="24" fill="#6d3ee0"/>
@@ -537,15 +547,18 @@ footer{padding:3rem 2rem 2rem;border-top:1px solid rgba(255,255,255,0.05);max-wi
         <path d="M42 62 q-10 14 -4 30" stroke="#ffffff" stroke-width="6" stroke-linecap="round" fill="none" opacity=".85"/>
         <path d="M56 52 q-12 16 -5 34" stroke="#ffffff" stroke-width="6" stroke-linecap="round" fill="none" opacity=".85"/>
         <!-- eyes -->
+        <g class="pp-eye">
         <circle cx="76" cy="98" r="11" fill="#17102b"/>
         <circle cx="130" cy="98" r="11" fill="#17102b"/>
         <circle cx="80" cy="94" r="4" fill="#ffffff"/>
         <circle cx="134" cy="94" r="4" fill="#ffffff"/>
+        </g>
         <!-- blush -->
         <ellipse cx="56" cy="120" rx="10" ry="6" fill="#f5a7c0" opacity=".8"/>
         <ellipse cx="150" cy="120" rx="10" ry="6" fill="#f5a7c0" opacity=".8"/>
         <!-- smile -->
         <path d="M84 122 q19 16 38 0" stroke="#17102b" stroke-width="7" stroke-linecap="round" fill="none"/>
+        </g>
       </svg>
       <div class="pp-ticket">
         <div class="pp-stamp"><span>FREE</span><small>FIRST WAVE</small></div>
@@ -777,6 +790,17 @@ window.addEventListener('scroll',()=>tb.classList.toggle('scrolled',scrollY>50))
 const reveals=document.querySelectorAll('.reveal');
 const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')}),{threshold:0.15});
 reveals.forEach(el=>obs.observe(el));
+const langNames=["Tiếng Việt","ภาษาไทย","Filipino","नेपाली","မြန်မာ","Bahasa Indonesia","සිංහල","ខ្មែរ","Монгол","বাংলা","اردو","Oʻzbek","Кыргызча","中文","ລາວ","Tetun","Тоҷикӣ","English"];
+const fls=document.querySelectorAll('.fl');
+if(fls.length&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  let lp=fls.length;
+  setInterval(()=>{
+    const el=fls[lp%fls.length];
+    el.classList.add('fading');
+    setTimeout(()=>{el.textContent=langNames[lp%langNames.length];el.classList.remove('fading');},450);
+    lp++;
+  },2600);
+}
 const ppB=document.getElementById('pp-banner');
 if(sessionStorage.getItem('ppBannerClosed'))ppB.style.display='none';
 document.getElementById('pp-banner-x').addEventListener('click',()=>{ppB.style.display='none';sessionStorage.setItem('ppBannerClosed','1');});
