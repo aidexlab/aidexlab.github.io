@@ -323,7 +323,8 @@ footer{padding:3rem 2rem 2rem;border-top:1px solid rgba(255,255,255,0.05);max-wi
   .credential{margin:1.5rem auto 0}
 }
 @media(max-width:480px){
-  .hero{padding:8rem 1.25rem 3rem}
+  .hero{padding:7.5rem 1.25rem 2.5rem;min-height:auto}
+  .hero-phone{display:none}
   .phone{width:220px;height:440px}
   .stat-n{font-size:1.8rem}
   .val-grid{grid-template-columns:1fr 1fr}
@@ -346,6 +347,20 @@ footer{padding:3rem 2rem 2rem;border-top:1px solid rgba(255,255,255,0.05);max-wi
     Get App
   </a>
 </nav>
+
+<!-- ===== PIONEER PASS BANNER ===== -->
+<div id="pp-banner">
+  <a href="#pioneer-pass">🎟️ Pioneer Pass — 선착순 300명 전 챕터 무료 · All 6 chapters free for the first 300 →</a>
+  <button id="pp-banner-x" aria-label="close">✕</button>
+</div>
+<style>
+#pp-banner{position:fixed;top:64px;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,#4a23b4,#6d3ee0);padding:9px 44px 9px 16px;word-break:keep-all;box-shadow:0 4px 16px rgba(20,10,45,.3);}
+#pp-banner a{color:#fff;font-size:0.82rem;font-weight:700;text-align:center;line-height:1.4;}
+#pp-banner a:hover{text-decoration:underline;}
+#pp-banner button{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.75);font-size:14px;cursor:pointer;padding:6px;}
+#pp-banner button:hover{color:#fff;}
+</style>
+
 
 <!-- ===== HERO ===== -->
 <section class="hero">
@@ -425,6 +440,136 @@ footer{padding:3rem 2rem 2rem;border-top:1px solid rgba(255,255,255,0.05);max-wi
     </div>
   </div>
 </section>
+
+<!-- ═══════════════ PIONEER PASS SECTION START ═══════════════ -->
+<section id="pioneer-pass" class="reveal" style="background:linear-gradient(135deg,#2a1556,#4a23b4 52%,#6d3ee0);padding:72px 20px;overflow:hidden;">
+  <style>
+    #pioneer-pass{word-break:keep-all;overflow-wrap:break-word;scroll-margin-top:110px;}
+    #pioneer-pass *{box-sizing:border-box;margin:0;padding:0;}
+    #pioneer-pass .pp-wrap{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:center;justify-content:center;}
+    #pioneer-pass .pp-left{flex:1 1 440px;min-width:300px;color:#fff;}
+    #pioneer-pass .pp-right{flex:0 1 380px;min-width:300px;display:flex;justify-content:center;position:relative;align-self:flex-end;}
+    #pioneer-pass .pp-peek{position:absolute;top:-96px;right:44px;width:118px;height:auto;transform:rotate(6deg);z-index:0;filter:drop-shadow(0 6px 10px rgba(10,5,30,.3));}
+    #pioneer-pass .pp-badge{display:inline-block;background:rgba(255,211,77,.15);border:1px solid #FFD34D;color:#FFD34D;font-size:12px;font-weight:800;letter-spacing:2px;border-radius:99px;padding:6px 16px;text-transform:uppercase;}
+    #pioneer-pass h2{font-size:38px;font-weight:800;line-height:1.2;margin:18px 0 6px;color:#fff;}
+    #pioneer-pass .pp-sub{font-size:17px;color:#d8c9f7;line-height:1.6;margin-bottom:8px;}
+    #pioneer-pass .pp-sub b{color:#FFD34D;}
+    #pioneer-pass .pp-limit{font-size:13px;color:rgba(255,255,255,.78);margin-bottom:26px;}
+    #pioneer-pass .pp-steps{display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap;}
+    #pioneer-pass .pp-step{flex:1 1 140px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:14px;}
+    #pioneer-pass .pp-step b{display:block;font-size:22px;color:#FFD34D;margin-bottom:6px;}
+    #pioneer-pass .pp-step span{font-size:13px;color:#e4dbf9;line-height:1.5;display:block;}
+    #pioneer-pass .pp-cta-label{font-size:13px;font-weight:700;color:#d8c9f7;margin-bottom:10px;letter-spacing:.5px;}
+    #pioneer-pass .pp-btns{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:22px;max-width:440px;}
+    #pioneer-pass .pp-btn{display:block;text-align:center;background:#FFD34D;color:#2a1556;font-size:15px;font-weight:800;text-decoration:none;padding:13px 22px;border-radius:12px;transition:transform .15s;}
+    #pioneer-pass .pp-btn:hover{transform:translateY(-2px);}
+    #pioneer-pass .pp-btn.alt{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);font-weight:700;}
+    #pioneer-pass .pp-trust{font-size:12.5px;color:rgba(255,255,255,.82);line-height:1.7;}
+    #pioneer-pass .pp-trust b{color:#e4dbf9;}
+    /* ticket */
+    #pioneer-pass .pp-ticket{width:340px;max-width:100%;background:linear-gradient(145deg,#0e5f52,#0a4a40);border-radius:18px;padding:26px 24px;position:relative;box-shadow:0 18px 44px rgba(10,5,30,.45);transform:rotate(-4deg);}
+    #pioneer-pass .pp-ticket:before,#pioneer-pass .pp-ticket:after{content:"";position:absolute;width:26px;height:26px;background:#3b1e8f;border-radius:50%;left:-13px;}
+    #pioneer-pass .pp-ticket:before{top:38%;}
+    #pioneer-pass .pp-ticket:after{top:62%;}
+    #pioneer-pass .pp-t-brand{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:#bfe8dd;margin-bottom:16px;}
+    #pioneer-pass .pp-t-brand i{width:22px;height:22px;border-radius:50%;background:#fff;display:inline-block;}
+    #pioneer-pass .pp-t-title{font-size:34px;font-weight:900;color:#fff;line-height:1.05;}
+    #pioneer-pass .pp-t-desc{font-size:13.5px;color:#bfe8dd;margin:10px 0 18px;}
+    #pioneer-pass .pp-t-row{display:flex;justify-content:space-between;align-items:flex-end;border-top:1px dashed rgba(255,255,255,.25);padding-top:14px;}
+    #pioneer-pass .pp-t-row small{display:block;font-size:9px;letter-spacing:1.5px;color:#8fc8ba;text-transform:uppercase;margin-bottom:3px;}
+    #pioneer-pass .pp-t-row .n{font-size:20px;font-weight:800;color:#fff;font-family:'Courier New',monospace;}
+    #pioneer-pass .pp-t-row .k{font-size:14px;color:#bfe8dd;}
+    #pioneer-pass .pp-stamp{position:absolute;top:18px;right:18px;width:74px;height:74px;border-radius:50%;background:#FFD34D;color:#5a4500;display:flex;align-items:center;justify-content:center;flex-direction:column;font-weight:900;transform:rotate(12deg);box-shadow:0 4px 10px rgba(0,0,0,.25);}
+    #pioneer-pass .pp-stamp span{font-size:16px;line-height:1;}
+    #pioneer-pass .pp-stamp small{font-size:7.5px;letter-spacing:1px;}
+    #pioneer-pass .pp-faq{max-width:1040px;margin:28px auto 0;border-top:1px solid rgba(255,255,255,.15);padding-top:26px;display:flex;gap:20px;flex-wrap:wrap;}
+    #pioneer-pass .pp-faq div{flex:1 1 280px;}
+    #pioneer-pass .pp-faq b{display:block;font-size:13.5px;color:#FFD34D;margin-bottom:5px;}
+    #pioneer-pass .pp-faq p{font-size:12.5px;color:#d8c9f7;line-height:1.65;}
+    @media (max-width:720px){
+      #pioneer-pass h2{font-size:28px;}
+      #pioneer-pass .pp-ticket{transform:rotate(0);}
+      #pioneer-pass .pp-btns{grid-template-columns:1fr;max-width:100%;}
+    }
+  </style>
+
+  <div class="pp-wrap">
+    <div class="pp-left">
+      <span class="pp-badge">Limited Event · First Wave</span>
+      <h2>Pioneer Pass<br>전 챕터 무료 이용권</h2>
+      <p class="pp-sub">Get <b>all 6 chapters free</b> — for the first <b>300 pioneers</b>.<br>
+      선착순 300명에게 Lingoop 전체 학습권을 드립니다.</p>
+      <p class="pp-limit">언어별 수량 한정 · Limited codes per language · No purchase required</p>
+
+      <div class="pp-steps">
+        <div class="pp-step"><b>1</b><span>Apply with your email<br>이메일로 신청</span></div>
+        <div class="pp-step"><b>2</b><span>Get your code within 24h<br>24시간 내 코드 수신</span></div>
+        <div class="pp-step"><b>3</b><span>Redeem on Google Play<br>플레이스토어에서 등록</span></div>
+      </div>
+
+      <div class="pp-cta-label">Choose your language · 언어를 선택하세요</div>
+      <div class="pp-btns">
+        <a class="pp-btn" href="https://forms.gle/d6nuJoBj2Qf9XWT57" target="_blank" rel="noopener">Tiếng Việt →</a>
+        <a class="pp-btn" href="https://forms.gle/eR5SAo2h3fs8QF9j6" target="_blank" rel="noopener">नेपाली →</a>
+        <a class="pp-btn" href="https://forms.gle/AR7Smx6YHBFHuH1R9" target="_blank" rel="noopener">မြန်မာ →</a>
+        <a class="pp-btn" href="https://forms.gle/oc1Aut8St4toHsbc9" target="_blank" rel="noopener">English / Other →</a>
+      </div>
+
+      <p class="pp-trust">✓ 결제 정보를 요구하지 않습니다 — 폼은 이메일만 수집 &nbsp;·&nbsp; ✓ No payment info required<br>
+      <b>AiDEX LAB</b> · 2025 파주시 사회적경제 창업 지원사업 선정</p>
+    </div>
+
+    <div class="pp-right">
+      <svg class="pp-peek" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <radialGradient id="ppBody" cx="38%" cy="32%" r="75%">
+            <stop offset="0%" stop-color="#cdbdf5"/>
+            <stop offset="60%" stop-color="#a58ceb"/>
+            <stop offset="100%" stop-color="#8465d6"/>
+          </radialGradient>
+        </defs>
+        <!-- ears -->
+        <ellipse cx="21" cy="112" rx="17" ry="24" fill="#6d3ee0"/>
+        <ellipse cx="179" cy="112" rx="17" ry="24" fill="#6d3ee0"/>
+        <!-- body -->
+        <circle cx="100" cy="105" r="80" fill="url(#ppBody)"/>
+        <!-- swoosh -->
+        <path d="M42 62 q-10 14 -4 30" stroke="#ffffff" stroke-width="6" stroke-linecap="round" fill="none" opacity=".85"/>
+        <path d="M56 52 q-12 16 -5 34" stroke="#ffffff" stroke-width="6" stroke-linecap="round" fill="none" opacity=".85"/>
+        <!-- eyes -->
+        <circle cx="76" cy="98" r="11" fill="#17102b"/>
+        <circle cx="130" cy="98" r="11" fill="#17102b"/>
+        <circle cx="80" cy="94" r="4" fill="#ffffff"/>
+        <circle cx="134" cy="94" r="4" fill="#ffffff"/>
+        <!-- blush -->
+        <ellipse cx="56" cy="120" rx="10" ry="6" fill="#f5a7c0" opacity=".8"/>
+        <ellipse cx="150" cy="120" rx="10" ry="6" fill="#f5a7c0" opacity=".8"/>
+        <!-- smile -->
+        <path d="M84 122 q19 16 38 0" stroke="#17102b" stroke-width="7" stroke-linecap="round" fill="none"/>
+      </svg>
+      <div class="pp-ticket">
+        <div class="pp-stamp"><span>FREE</span><small>FIRST WAVE</small></div>
+        <div class="pp-t-brand"><img src="https://aidexlab.org/appicon512.png" alt="Lingoop" style="width:28px;height:28px;border-radius:50%;background:#fff;padding:2px;box-shadow:0 2px 6px rgba(0,0,0,.2);">Lingoop</div>
+        <div class="pp-t-title">Pioneer<br>Pass</div>
+        <div class="pp-t-desc">All 6 chapters, unlocked<br>모든 챕터 잠금 해제</div>
+        <div class="pp-t-row">
+          <div><small>Pioneer Seats</small><span class="n">300</span></div>
+          <div class="k">환영합니다</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pp-faq">
+    <div><b>Is this really free? 정말 무료인가요?</b>
+      <p>Yes. No purchase, no payment info, no conditions. AiDEX LAB gives 300 codes to early learners to improve Lingoop together.</p></div>
+    <div><b>How do I use the code? 코드는 어떻게 쓰나요?</b>
+      <p>Play Store app → profile icon (top right) → Payments &amp; subscriptions → Redeem code. All 6 chapters unlock instantly.</p></div>
+    <div><b>Who can apply? 누가 신청할 수 있나요?</b>
+      <p>Anyone preparing for EPS-TOPIK or learning Korean. Codes are limited per language — first come, first served.</p></div>
+  </div>
+</section>
+<!-- ═══════════════ PIONEER PASS SECTION END ═══════════════ -->
 
 <!-- ===== STATS ===== -->
 <section class="stats">
@@ -508,7 +653,7 @@ footer{padding:3rem 2rem 2rem;border-top:1px solid rgba(255,255,255,0.05);max-wi
         <div class="feat-icon">
           <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         </div>
-        <h3>학습 통계 & 진도 관리</h3>
+        <h3>학습 통계 &amp; 진도 관리</h3>
         <p>진도를 직관적으로 파악하고, 이어서 학습하기와 북마크로 효율적으로 반복합니다.</p>
       </div>
       <div class="feat-card">
@@ -632,6 +777,9 @@ window.addEventListener('scroll',()=>tb.classList.toggle('scrolled',scrollY>50))
 const reveals=document.querySelectorAll('.reveal');
 const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')}),{threshold:0.15});
 reveals.forEach(el=>obs.observe(el));
+const ppB=document.getElementById('pp-banner');
+if(sessionStorage.getItem('ppBannerClosed'))ppB.style.display='none';
+document.getElementById('pp-banner-x').addEventListener('click',()=>{ppB.style.display='none';sessionStorage.setItem('ppBannerClosed','1');});
 </script>
 </body>
 </html>
