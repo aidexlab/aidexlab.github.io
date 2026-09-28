@@ -7,8 +7,8 @@
 <!--
   DRAFT for https://aidexlab.org/bites/privacy (2026-09-28).
   Effective date 2026-09-28; no postal address; no personal officer name — privacy contact = AiDEX LAB + email (planner 9/28).
-  Sections marked "IF FIREBASE" describe Firebase Analytics / Crashlytics / ad reports.
-  Keep them only if the release build actually includes Firebase; otherwise delete them.
+  §4 (Firebase Analytics + Crashlytics) is in the Android build since 2026-09-28.
+  §5 (ad reports, iPhone) applies once the iOS build ships with Firebase.
 -->
 <style>
   :root { --text:#221E2A; --soft:#574D66; --line:#DCD3EA; --accent:#6D3EE0; --bg:#FFFFFF; }
@@ -68,13 +68,18 @@
 </ul>
 <p>Learn how Google uses this data: <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
-<!-- IF FIREBASE: start -->
 <h2>4. App statistics and crash reports (Google Firebase)</h2>
-<p>To find bugs and see which parts of the app work, we use Google Firebase Analytics and Firebase Crashlytics. They collect app events (for example, that a round was finished), app version, device model, operating system version and, when the app crashes, a technical crash report. They do not include your name, email or what you type. This data is processed by Google on our behalf. See <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</p>
+<p>To find bugs and see which parts of the app work, we use Google Firebase Analytics and Firebase Crashlytics. They collect:</p>
+<ul>
+  <li>App events (for example, that a round was finished or that you switched decks), app version, device model and operating system version</li>
+  <li>A random app instance identifier created for this installation (it is replaced when you use <em>Settings → Erase my progress</em>)</li>
+  <li>Your approximate location (country or region), derived from your IP address</li>
+  <li>When the app crashes, a technical crash report with a random installation identifier</li>
+</ul>
+<p>They do not include your name, email, what you type or your advertising ID. In the European Economic Area, the UK and Switzerland, app statistics are linked to the app instance identifier only if you agree in the consent form; otherwise they are sent without it. This data is processed by Google on our behalf. See <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</p>
 
 <h2>5. Reporting an ad (iPhone)</h2>
 <p>If you report an ad, the app sends us the reason you picked, any note you choose to write, which ad it was (ad unit and response identifiers from Google), the time, the app version and the platform. Please don't write personal information in the note. We use reports only to block inappropriate ads.</p>
-<!-- IF FIREBASE: end -->
 
 <h2>6. Purchases (Android)</h2>
 <p>On Android you can pay once to remove the ads between rounds. The payment is handled by Google Play. We do not receive your card or payment details; Google Play only tells the app that the purchase exists.</p>
