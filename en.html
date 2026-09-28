@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AiDEX LAB — Tools for people starting somewhere new</title>
+<meta name="description" content="AiDEX LAB builds small apps for people at a beginning: Lingoop (EPS-TOPIK Korean), Lingoop Bites (Korean words through pictures), Malbom (one sentence a day for self-care), plus app development, prompt design and AI coaching.">
+<meta property="og:title" content="AiDEX LAB">
+<meta property="og:description" content="Tools for people starting somewhere new. It begins with words.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aidexlab.org/en.html">
+<meta property="og:image" content="https://aidexlab.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://aidexlab.org/og-image.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="alternate" hreflang="ko" href="https://aidexlab.org/">
+<link rel="alternate" hreflang="en" href="https://aidexlab.org/en.html">
+<link rel="alternate" hreflang="x-default" href="https://aidexlab.org/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Orbit&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'RIDIBatang';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');font-weight:400;font-display:swap}
+html{scroll-behavior:smooth}
+html,body{margin:0;background:#0B0F1A;color:#F8FAFC;font-family:'Noto Sans KR',sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all}
+*{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+a:hover{color:#00B8D9}
+section[id]{scroll-margin-top:64px}
+@media(max-width:860px){[data-cols]{grid-template-columns:1fr !important}[data-hide-m]{display:none !important}[data-stack]{flex-direction:column !important;align-items:flex-start !important}}
+</style>
+</head>
+<body>
+<div style="min-height:100vh;background:#0B0F1A">
+
+  <!-- NAV -->
+  <nav style="position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 32px;height:64px;background:rgba(11,15,26,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)">
+    <a href="#top" style="font-family:'Orbit',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:-.5px">Ai<span style="color:#00B8D9">DEX</span> LAB</a>
+    <div data-hide-m style="display:flex;gap:28px;font-size:.88rem;color:#CBD5E1">
+      <a href="#lingoop">Lingoop</a><a href="#bites">Bites</a><a href="#malbom">Malbom</a><a href="#services">Services</a><a href="#about">About</a>
+    </div>
+    <div aria-label="Language" style="display:flex;gap:2px;padding:3px;border-radius:10px;border:1px solid rgba(255,255,255,.12);font-family:'JetBrains Mono',monospace;font-size:.76rem;letter-spacing:.5px"><a href="index.html" hreflang="ko" onclick="sessionStorage.setItem('lang','ko')" style="padding:5px 10px;border-radius:7px;color:#94A3B8">KO</a><span aria-current="true" style="padding:5px 10px;border-radius:7px;background:rgba(255,255,255,.1);color:#fff;font-weight:700">EN</span></div>
+  </nav>
+
+  <!-- HERO: 회사 소개 + 앱 목차 -->
+  <section id="top" style="max-width:1100px;margin:0 auto;padding:112px 32px 72px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:2px;color:#00B8D9;text-transform:uppercase;display:flex;align-items:center;gap:8px"><span style="width:24px;height:1px;background:#00B8D9"></span>AiDEX LAB</div>
+    <h1 style="font-family:'Orbit',sans-serif;font-size:clamp(2.2rem,4.6vw,3.6rem);font-weight:800;line-height:1.25;letter-spacing:-1px;margin:20px 0 18px;max-width:14em">Tools for people <span style="color:#00B8D9">starting somewhere new</span></h1>
+    <p style="font-size:1.05rem;line-height:1.9;color:#CBD5E1;max-width:36em;margin:0">Beginnings are hard on words — a new country's language, vocabulary that won't stick, the one sentence you didn't say today. AiDEX LAB puts <strong style="color:#fff">a small tool that fits your hand</strong> right there.</p>
+
+    <div style="margin-top:56px;border-top:1px solid rgba(255,255,255,.08)">
+      <a href="#lingoop" style="display:grid;grid-template-columns:56px 1fr auto;gap:22px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08)" data-cols>
+        <img src="appicon512.png" alt="" width="56" height="56" style="width:56px;height:56px;border-radius:15px">
+        <div><div style="font-family:'Orbit',sans-serif;font-size:1.15rem;font-weight:700;color:#fff">Lingoop</div><div style="font-size:.9rem;color:#94A3B8;margin-top:3px">EPS-TOPIK Korean · dual subtitles in 18 languages · offline</div></div>
+        <div style="display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#00B8D9;font-weight:700;letter-spacing:1px;white-space:nowrap">01 <span style="color:#64748B">→</span></div>
+      </a>
+      <a href="#bites" style="display:grid;grid-template-columns:56px 1fr auto;gap:22px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08)" data-cols>
+        <img src="bites-icon.png" alt="" width="56" height="56" style="width:56px;height:56px;border-radius:15px">
+        <div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.15rem;font-weight:800;letter-spacing:-.035em;color:#fff">Lingoop <span style="color:#A78BFA">Bites</span></div><div style="font-size:.9rem;color:#94A3B8;margin-top:3px">Everyday Korean, one picture-sized bite at a time · free</div></div>
+        <div style="display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#A78BFA;font-weight:700;letter-spacing:1px;white-space:nowrap">02 <span style="color:#64748B">→</span></div>
+      </a>
+      <a href="#malbom" style="display:grid;grid-template-columns:56px 1fr auto;gap:22px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08)" data-cols>
+        <img src="malbom-icon.png" alt="" width="56" height="56" style="width:56px;height:56px;border-radius:15px">
+        <div><div style="font-family:'RIDIBatang',serif;font-size:1.2rem;letter-spacing:.04em;color:#E8E4DA">말봄<span style="color:#A6A3C6">.</span></div><div style="font-size:.9rem;color:#94A3B8;margin-top:3px">One sentence a day, read aloud · malbom.kr</div></div>
+        <div style="display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#A6A3C6;font-weight:700;letter-spacing:1px;white-space:nowrap">03 <span style="color:#64748B">→</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 01 LINGOOP -->
+  <section id="lingoop" style="border-top:1px solid rgba(255,255,255,.06);background:linear-gradient(180deg,#0B0F1A,#0E1425)">
+    <div style="max-width:1100px;margin:0 auto;padding:96px 32px;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center" data-cols>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:2px;color:#00B8D9;text-transform:uppercase">01 — Lingoop</div>
+        <h2 style="font-family:'Orbit',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;line-height:1.3;letter-spacing:-.5px;margin:16px 0 18px">Korean in your own language,<br>the first sentence of a job in Korea</h2>
+        <p style="font-size:1rem;line-height:1.85;color:#CBD5E1;margin:0 0 28px;max-width:34em">An EPS-TOPIK study app for job seekers from 17 sending countries. <strong style="color:#fff">Dual subtitles in your native language</strong> mean no dictionary, and everything keeps working offline. Units 1–3 are free.</p>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:30px">
+          <div><div style="font-family:'Orbit',sans-serif;font-size:1.9rem;font-weight:700;color:#00B8D9">18</div><div style="font-size:.78rem;color:#94A3B8;letter-spacing:.5px">Languages</div></div>
+          <div><div style="font-family:'Orbit',sans-serif;font-size:1.9rem;font-weight:700;color:#00B8D9">17</div><div style="font-size:.78rem;color:#94A3B8;letter-spacing:.5px">Countries</div></div>
+          <div><div style="font-family:'Orbit',sans-serif;font-size:1.9rem;font-weight:700;color:#00B8D9">60</div><div style="font-size:.78rem;color:#94A3B8;letter-spacing:.5px">Units</div></div>
+          <div><div style="font-family:'Orbit',sans-serif;font-size:1.9rem;font-weight:700;color:#00B8D9">100%</div><div style="font-size:.78rem;color:#94A3B8;letter-spacing:.5px">Offline</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:.92rem;line-height:1.7;color:#E2E8F0;margin-bottom:34px">
+          <div style="display:grid;grid-template-columns:14px 1fr;gap:10px"><span style="width:5px;height:5px;border-radius:50%;background:#00B8D9;margin-top:.7em"></span>Korean + native-language dual subtitles — 18 languages</div>
+          <div style="display:grid;grid-template-columns:14px 1fr;gap:10px"><span style="width:5px;height:5px;border-radius:50%;background:#00B8D9;margin-top:.7em"></span>60 units that follow the official EPS-TOPIK textbook</div>
+          <div style="display:grid;grid-template-columns:14px 1fr;gap:10px"><span style="width:5px;height:5px;border-radius:50%;background:#00B8D9;margin-top:.7em"></span>Download once, study without internet</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <a href="https://play.google.com/store/apps/details?id=com.aidexlab.epstopik" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 20px;border-radius:12px;background:#000;border:1px solid rgba(255,255,255,.14)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:21px;height:23px;flex:none"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#4285F4"></path><path d="M17.727 8.063L5.21.856a1 1 0 00-.506-.126l9.088 9.088 3.935-1.755z" fill="#EA4335"></path><path d="M17.727 15.937l-3.935-1.755L4.704 23.27c.16.003.322-.035.506-.126l12.517-7.207z" fill="#34A853"></path><path d="M21.182 10.475l-3.455-1.988-4.11 3.513 4.11 3.513 3.455-1.988c.812-.468.812-2.582 0-3.05z" fill="#FBBC04"></path></svg><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:7.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#94A3B8">Get it on</span><span style="font-size:14px;font-weight:700;color:#fff">Google Play</span></span></a>
+          <a href="pioneer-pass.html" style="font-size:.9rem;color:#00B8D9;font-weight:700">Pioneer Pass — all chapters free for early users →</a>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center">
+        <div style="width:250px;height:540px;border-radius:26px;border:3px solid #1c2130;background:#6a41e2;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.55)"><img src="lingoop-shot-conversation.jpg" alt="Lingoop conversation lesson" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top;padding-top:28px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 LINGOOP BITES (라벤더 라이트) -->
+  <section id="bites" style="background:#F0EBF9;color:#1F1926">
+    <div style="max-width:1100px;margin:0 auto;padding:96px 32px;display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center" data-cols>
+      <div style="display:flex;justify-content:center;align-items:flex-end;gap:0;position:relative;order:0">
+        <div style="width:250px;height:567px;border-radius:26px;background:#FAF8FD;border:3px solid #2A2438;overflow:hidden;box-shadow:0 40px 80px rgba(59,27,110,.22);padding-top:12px">
+          <img src="bites-shot-home.png" alt="Lingoop Bites home — Your first 6 are ready" style="display:block;width:100%;height:100%;object-fit:contain;object-position:top">
+        </div>
+        <img src="bites-loop.png" alt="Loop, the mascot" width="150" height="150" style="width:150px;height:150px;margin-left:-40px;margin-bottom:-10px;position:relative">
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:2px;color:#6D3EE0;text-transform:uppercase">02 — Lingoop Bites</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.035em;color:#6D3EE0;margin-top:14px">Lingoop <span style="color:#1F1926">Bites</span> <span style="font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.14em;font-weight:500;color:#574D66;margin-left:8px">korean</span></div>
+        <h2 style="font-family:'Figtree','Noto Sans KR',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:600;line-height:1.3;letter-spacing:-.02em;margin:10px 0 18px;color:#1F1926">Korean, one bite<br>at a time.</h2>
+        <p style="font-size:1rem;line-height:1.85;color:#574D66;margin:0 0 14px;max-width:34em">The second Korean app from the team behind Lingoop — not for exam prep, but for anyone who got curious about Korean through a drama, a song, or one trip to Seoul.</p>
+        <p style="font-size:1rem;line-height:1.85;color:#574D66;margin:0 0 26px;max-width:34em">Open it and today's six cards are already on the table, in pictures. No login, no deck to pick — just take a bite. Two minutes clears the plate; still hungry? One more serving.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:30px" data-cols>
+          <div style="background:#fff;border:1px solid #DDD3F0;border-radius:20px;padding:18px 16px"><div style="font-family:'Figtree',sans-serif;font-weight:600;font-size:.98rem;color:#1F1926">Pictures before letters</div><div style="font-size:.84rem;line-height:1.65;color:#574D66;margin-top:6px">20 decks — greetings, side dishes, the subway, K-drama — all free. Picture quizzes and flashcards show you the meaning first; the word follows.</div></div>
+          <div style="background:#fff;border:1px solid #DDD3F0;border-radius:20px;padding:18px 16px"><div style="font-family:'Figtree',sans-serif;font-weight:600;font-size:.98rem;color:#1F1926">Boxes that drift away as you learn</div><div style="font-size:.84rem;line-height:1.65;color:#574D66;margin-top:6px">Words you get right move up a box and come back after 1, 3, 7, 16 and 35 days — served once more, right when you'd forget.</div></div>
+          <div style="background:#fff;border:1px solid #DDD3F0;border-radius:20px;padding:18px 16px"><div style="font-family:'Figtree',sans-serif;font-weight:600;font-size:.98rem;color:#1F1926">Sound always travels with you</div><div style="font-size:.84rem;line-height:1.65;color:#574D66;margin-top:6px">Every word has Korean audio. On the subway or on a plane, it all works without internet.</div></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <a href="https://play.google.com/store/apps/details?id=com.aidexlab.lingoop.bites" target="_blank" rel="noopener" aria-label="Get Lingoop Bites on Google Play" style="display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 20px;border-radius:12px;background:#000;border:1px solid rgba(255,255,255,.14)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:21px;height:23px;flex:none"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#4285F4"></path><path d="M17.727 8.063L5.21.856a1 1 0 00-.506-.126l9.088 9.088 3.935-1.755z" fill="#EA4335"></path><path d="M17.727 15.937l-3.935-1.755L4.704 23.27c.16.003.322-.035.506-.126l12.517-7.207z" fill="#34A853"></path><path d="M21.182 10.475l-3.455-1.988-4.11 3.513 4.11 3.513 3.455-1.988c.812-.468.812-2.582 0-3.05z" fill="#FBBC04"></path></svg><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:7.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#94A3B8">Get it on</span><span style="font-size:14px;font-weight:700;color:#fff">Google Play</span></span></a>
+          <a href="#" aria-label="Lingoop Bites App Store" style="display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 20px;border-radius:12px;background:#000;border:1px solid rgba(255,255,255,.14)"><svg viewBox="0 0 384 512" aria-hidden="true" style="width:19px;height:23px;flex:none;color:#fff"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-36.8-2.8-77 21.3-91.7 21.3-15.5 0-51.1-20.3-79.1-20.3C61.2 141.2 3 184.8 3 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 62.6 126.1 114.5 124.5 27.2-.6 46.4-19.3 81.8-19.3 34.4 0 52.2 19.3 82.6 19.3 52.3-.8 97.4-82.1 109.6-118.9-69.9-32.9-86.2-95.9-86.2-97.6zM255.7 82.3c19.5-23.1 27.7-52.6 25.5-88.3-33.6 2.4-64.5 21.4-84.4 45.4-19 23.4-30.9 51.3-27.8 84.6 32.8 2.9 61.4-13.6 86.7-41.7z"></path></svg><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:7.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#94A3B8">Coming to</span><span style="font-size:14px;font-weight:700;color:#fff">App Store</span></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 말봄 (짧게 — malbom.kr로) -->
+  <section id="malbom" style="background:#232220;border-bottom:1px solid #3B3934">
+    <div style="max-width:1100px;margin:0 auto;padding:96px 32px;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center" data-cols>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:2px;color:#A6A3C6;text-transform:uppercase">03 — Malbom · 말봄</div>
+        <h2 style="font-family:'RIDIBatang',serif;font-weight:400;font-size:clamp(1.7rem,3vw,2.2rem);line-height:1.55;letter-spacing:.01em;color:#E8E4DA;margin:16px 0 18px">One sentence a day,<br>read out loud<span style="color:#A6A3C6">.</span></h2>
+        <p style="font-size:1rem;line-height:1.9;color:#A8A296;margin:0 0 28px;max-width:32em">At night, the things you meant to say linger. Malbom leaves one well-chosen sentence in their place. A quiet tool that never nags — no streaks, no badges, no rankings. Korean only for now.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <a href="https://play.google.com/store/apps/details?id=com.aidexlab.malbom" target="_blank" rel="noopener" aria-label="Get Malbom on Google Play" style="display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 20px;border-radius:12px;background:#000;border:1px solid rgba(255,255,255,.14)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:21px;height:23px;flex:none"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#4285F4"></path><path d="M17.727 8.063L5.21.856a1 1 0 00-.506-.126l9.088 9.088 3.935-1.755z" fill="#EA4335"></path><path d="M17.727 15.937l-3.935-1.755L4.704 23.27c.16.003.322-.035.506-.126l12.517-7.207z" fill="#34A853"></path><path d="M21.182 10.475l-3.455-1.988-4.11 3.513 4.11 3.513 3.455-1.988c.812-.468.812-2.582 0-3.05z" fill="#FBBC04"></path></svg><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:7.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#94A3B8">Get it on</span><span style="font-size:14px;font-weight:700;color:#fff">Google Play</span></span></a>
+          <a href="https://forms.gle/AUJYxWeessT927ed7" target="_blank" rel="noopener" aria-label="Malbom on the App Store" style="display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 20px;border-radius:12px;background:#000;border:1px solid rgba(255,255,255,.14)"><svg viewBox="0 0 384 512" aria-hidden="true" style="width:19px;height:23px;flex:none;color:#fff"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-36.8-2.8-77 21.3-91.7 21.3-15.5 0-51.1-20.3-79.1-20.3C61.2 141.2 3 184.8 3 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 62.6 126.1 114.5 124.5 27.2-.6 46.4-19.3 81.8-19.3 34.4 0 52.2 19.3 82.6 19.3 52.3-.8 97.4-82.1 109.6-118.9-69.9-32.9-86.2-95.9-86.2-97.6zM255.7 82.3c19.5-23.1 27.7-52.6 25.5-88.3-33.6 2.4-64.5 21.4-84.4 45.4-19 23.4-30.9 51.3-27.8 84.6 32.8 2.9 61.4-13.6 86.7-41.7z"></path></svg><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:7.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#94A3B8">Coming to</span><span style="font-size:14px;font-weight:700;color:#fff">App Store</span></span></a>
+          <a href="https://malbom.kr" target="_blank" rel="noopener" aria-label="Malbom website" style="display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 20px;border-radius:12px;background:#2B2A26;border:1px solid #3B3934"><img src="malbom-icon.png" alt="" width="23" height="23" style="width:23px;height:23px;border-radius:6px;flex:none"><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:7.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#A8A296">Visit</span><span style="font-size:14px;font-weight:700;color:#E8E4DA">malbom.kr</span></span></a>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center"><div style="width:250px;height:540px;border-radius:26px;border:3px solid #3B3934;background:#1E1D1A;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.5)"><img src="malbom-shot-dark.png" alt="Malbom today card" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top"></div></div>
+    </div>
+  </section>
+
+  <!-- SERVICES (압축) -->
+  <section id="services" style="max-width:1100px;margin:0 auto;padding:96px 32px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:2px;color:#00B8D9;text-transform:uppercase;display:flex;align-items:center;gap:8px"><span style="width:24px;height:1px;background:#00B8D9"></span>Services</div>
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:48px;margin-top:16px;align-items:start" data-cols>
+      <div>
+        <h2 style="font-family:'Orbit',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;line-height:1.3;letter-spacing:-.5px;margin:0 0 16px">We build<br>alongside you</h2>
+        <p style="font-size:1rem;line-height:1.85;color:#CBD5E1;margin:0 0 24px">The same method we use for our own apps — planning, content, development, launch.</p>
+        <a href="mailto:aidexlab@gmail.com?subject=%5BInquiry%5D%20AiDEX%20LAB" style="display:inline-flex;align-items:center;height:46px;padding:0 20px;border-radius:12px;background:#00B8D9;color:#0B0F1A;font-weight:700;font-size:.9rem">Get in touch by email</a>
+        <div style="font-size:.8rem;color:#94A3B8;margin-top:10px">Usually answered within a day · aidexlab@gmail.com</div>
+      </div>
+      <div style="display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.08)">
+        <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08)"><span style="font-family:'JetBrains Mono',monospace;font-size:.75rem;color:#00B8D9;padding-top:4px">01</span><div><div style="font-family:'Orbit',sans-serif;font-size:1.05rem;font-weight:700">App development</div><div style="font-size:.9rem;line-height:1.7;color:#CBD5E1;margin-top:6px">One flow from planning to store launch. Android, iOS, web — landing page, terms and store listing included. MVP first if that helps.</div></div></div>
+        <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08)"><span style="font-family:'JetBrains Mono',monospace;font-size:.75rem;color:#00B8D9;padding-top:4px">02</span><div><div style="font-family:'Orbit',sans-serif;font-size:1.05rem;font-weight:700">AI prompt design</div><div style="font-size:.9rem;line-height:1.7;color:#CBD5E1;margin-top:6px">Prompt sets per workflow, custom GPT / Claude Projects setup, and guides your team can keep using.</div></div></div>
+        <div style="display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08)"><span style="font-family:'JetBrains Mono',monospace;font-size:.75rem;color:#00B8D9;padding-top:4px">03</span><div><div style="font-family:'Orbit',sans-serif;font-size:1.05rem;font-weight:700">1:1 AI coaching</div><div style="font-size:.9rem;line-height:1.7;color:#CBD5E1;margin-top:6px">60–90 min online, one on one. Hands-on with your own work, from tool connections (MCP) to automation (n8n, Make).</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT (About + KSBOX1030 통합) -->
+  <section id="about" style="border-top:1px solid rgba(255,255,255,.06);background:#0E1425">
+    <div style="max-width:1100px;margin:0 auto;padding:96px 32px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start" data-cols>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:2px;color:#00B8D9;text-transform:uppercase;display:flex;align-items:center;gap:8px"><span style="width:24px;height:1px;background:#00B8D9"></span>About</div>
+        <h2 style="font-family:'Orbit',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;line-height:1.3;letter-spacing:-.5px;margin:16px 0 18px">Beginnings are<br>hard on words</h2>
+        <p style="font-size:1rem;line-height:1.85;color:#CBD5E1;margin:0 0 14px">Tens of thousands prepare for EPS-TOPIK every year with few tools in their own language; people curious about Korean stall in front of serious courses; habit apps wear people down with reminders. We fill those gaps with technology — quietly.</p>
+        <p style="font-size:1rem;line-height:1.85;color:#CBD5E1;margin:0 0 14px">Some <strong style="color:#fff">200 mid-to-large IT projects</strong> as a service planner and PM; since 2022, building Notion systems and teaching as <strong style="color:#fff">KSBOX1030</strong>, learning to make things alone. That work became AiDEX LAB.</p>
+        <p style="font-size:1rem;line-height:1.85;color:#CBD5E1;margin:0">The goal: an environment where everyone gets <strong style="color:#fff">a fair chance</strong>.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:24px">
+          <a href="https://kmong.com/@KSBOX1030" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;height:42px;padding:0 16px;border-radius:10px;background:#FFDD00;color:#111;font-size:.86rem;font-weight:700">Kmong profile</a>
+        </div>
+      </div>
+      <div style="background:#111827;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:24px 26px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:grid;grid-template-columns:76px 1fr;gap:12px;font-size:.88rem;line-height:1.6;color:#CBD5E1"><b style="font-family:'JetBrains Mono',monospace;font-weight:500;color:#00B8D9;font-size:.8rem">~2021</b><span>IT service planning & PM — ~200 projects</span></div>
+        <div style="display:grid;grid-template-columns:76px 1fr;gap:12px;font-size:.88rem;line-height:1.6;color:#CBD5E1"><b style="font-family:'JetBrains Mono',monospace;font-weight:500;color:#00B8D9;font-size:.8rem">2022</b><span>KSBOX1030 — Notion builds & teaching on Kmong</span></div>
+        <div style="display:grid;grid-template-columns:76px 1fr;gap:12px;font-size:.88rem;line-height:1.6;color:#CBD5E1"><b style="font-family:'JetBrains Mono',monospace;font-weight:500;color:#00B8D9;font-size:.8rem">2025</b><span>AiDEX LAB founded · selected for Paju City social-economy startup program</span></div>
+        <div style="display:grid;grid-template-columns:76px 1fr;gap:12px;font-size:.88rem;line-height:1.6;color:#CBD5E1"><b style="font-family:'JetBrains Mono',monospace;font-weight:500;color:#00B8D9;font-size:.8rem">2026</b><span>Lingoop & Malbom launched — Lingoop Bites in preparation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="max-width:1100px;margin:0 auto;padding:48px 32px 32px;border-top:1px solid rgba(255,255,255,.06)">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px" data-cols>
+      <div><div style="font-family:'Orbit',sans-serif;font-size:1.15rem;font-weight:700">Ai<span style="color:#00B8D9">DEX</span> LAB</div><p style="font-size:.85rem;color:#64748B;line-height:1.7;margin:10px 0 0;max-width:28em">Tools for people starting somewhere new. It begins with words.</p>
+        <div style="display:inline-flex;align-items:center;gap:12px;margin-top:22px"><img src="paju_logo_mono.svg" alt="Paju City" width="64" height="36" style="width:64px;height:36px;display:block"><span style="font-size:.76rem;line-height:1.4;color:#64748B">Selected · 2025 Paju City<br>Social-Economy Startup Program</span></div></div>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:.85rem;color:#94A3B8"><b style="color:#fff;font-size:.8rem;letter-spacing:1px;text-transform:uppercase">Apps</b>
+        <div style="display:flex;flex-direction:column;gap:3px"><a href="#lingoop">Lingoop</a><span style="font-size:.75rem;color:#64748B"><a href="https://ksbox1030.notion.site/Privacy-Policy-AidexLab-Korean-268570713a878013ac56d76300155af5" target="_blank" rel="noopener">Privacy</a></span></div>
+        <div style="display:flex;flex-direction:column;gap:3px"><a href="#bites">Lingoop Bites</a><span style="font-size:.75rem;color:#64748B"><a href="/bites/terms" target="_blank" rel="noopener">Terms</a> · <a href="/bites/privacy" target="_blank" rel="noopener">Privacy</a></span></div>
+        <div style="display:flex;flex-direction:column;gap:3px"><a href="https://malbom.kr" target="_blank" rel="noopener">Malbom · malbom.kr</a><span style="font-size:.75rem;color:#64748B"><a href="https://malbom.kr/terms.html" target="_blank" rel="noopener">Terms</a> · <a href="https://malbom.kr/privacy.html" target="_blank" rel="noopener">Privacy</a></span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:.85rem;color:#94A3B8"><b style="color:#fff;font-size:.8rem;letter-spacing:1px;text-transform:uppercase">Contact</b><a href="mailto:aidexlab@gmail.com">aidexlab@gmail.com</a><a href="https://kmong.com/@KSBOX1030" target="_blank" rel="noopener">Kmong · KSBOX1030</a><a href="https://instagram.com/malbom.kr" target="_blank" rel="noopener">Instagram @malbom.kr</a></div>
+    </div>
+    <div style="margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.06);font-size:.78rem;color:#64748B;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span>© 2026 AiDEX LAB · aidexlab@gmail.com</span></div>
+  </footer>
+</div>
+</body>
+</html>
