@@ -32,6 +32,14 @@ html,body{margin:0;background:#0B0F1A;color:#F8FAFC;font-family:'Noto Sans KR',s
 a{color:inherit;text-decoration:none}
 a:hover{color:#00B8D9}
 section[id]{scroll-margin-top:64px}
+@media(max-width:860px){
+  #topnav{flex-wrap:wrap;height:auto;padding:0 20px;row-gap:0}
+  #topnav>a:first-child{height:56px;display:flex;align-items:center}
+  #navlinks{order:3;flex-basis:100%;gap:0;overflow-x:auto;scrollbar-width:none;margin:0 -20px;padding:0 12px;border-top:1px solid rgba(255,255,255,.06)}
+  #navlinks::-webkit-scrollbar{display:none}
+  #navlinks a{flex:none;padding:12px 10px;font-size:.84rem;white-space:nowrap}
+  section[id]{scroll-margin-top:100px}
+}
 @media(max-width:860px){[data-cols]{grid-template-columns:1fr !important}[data-hide-m]{display:none !important}[data-stack]{flex-direction:column !important;align-items:flex-start !important}}
 </style>
 </head>
@@ -39,9 +47,9 @@ section[id]{scroll-margin-top:64px}
 <div style="min-height:100vh;background:#0B0F1A">
 
   <!-- NAV -->
-  <nav style="position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 32px;height:64px;background:rgba(11,15,26,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)">
+  <nav id="topnav" style="position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 32px;height:64px;background:rgba(11,15,26,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)">
     <a href="#top" style="font-family:'Orbit',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:-.5px">Ai<span style="color:#00B8D9">DEX</span> LAB</a>
-    <div data-hide-m style="display:flex;gap:28px;font-size:.88rem;color:#CBD5E1">
+    <div id="navlinks" style="display:flex;gap:28px;font-size:.88rem;color:#CBD5E1">
       <a href="#lingoop">Lingoop</a><a href="#bites">Bites</a><a href="#malbom">말봄</a><a href="#services">Services</a><a href="#about">About</a>
     </div>
     <div aria-label="Language" style="display:flex;gap:2px;padding:3px;border-radius:10px;border:1px solid rgba(255,255,255,.12);font-family:'JetBrains Mono',monospace;font-size:.76rem;letter-spacing:.5px"><span aria-current="true" style="padding:5px 10px;border-radius:7px;background:rgba(255,255,255,.1);color:#fff;font-weight:700">KO</span><a href="en.html" hreflang="en" style="padding:5px 10px;border-radius:7px;color:#94A3B8">EN</a></div>
@@ -113,7 +121,7 @@ section[id]{scroll-margin-top:64px}
       <div>
         <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:2px;color:#6D3EE0;text-transform:uppercase">02 — Lingoop Bites</div>
         <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.035em;color:#6D3EE0;margin-top:14px">Lingoop <span style="color:#1F1926">Bites</span> <span style="font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.14em;font-weight:500;color:#574D66;margin-left:8px">korean</span></div>
-        <h2 style="font-family:'Figtree','Noto Sans KR',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:600;line-height:1.3;letter-spacing:-.02em;margin:10px 0 18px;color:#1F1926">한국어, 오늘은<br>딱 한 입만.</h2>
+        <h2 style="font-family:'Figtree','Noto Sans KR',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:600;line-height:1.3;letter-spacing:-.02em;margin:10px 0 18px;color:#1F1926">한국어, 오늘은<br>딱 한 입만</h2>
         <p style="font-size:1rem;line-height:1.85;color:#574D66;margin:0 0 14px;max-width:34em">Lingoop을 만든 팀의 두 번째 한국어 앱. 시험 준비가 아니라 드라마 한 편, 노래 한 곡, 서울 여행 한 번에 한국어가 궁금해진 사람을 위해 만들었습니다.</p>
         <p style="font-size:1rem;line-height:1.85;color:#574D66;margin:0 0 26px;max-width:34em">열면 오늘 몫 6장이 그림으로 차려져 있습니다. 로그인도, 덱 고르기도 없이 바로 한 입. 2분이면 접시가 비고, 아직 출출하면 한 접시 더.</p>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:30px" data-cols>
