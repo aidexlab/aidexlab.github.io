@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lingoop Bites — Delete your data</title>
+<!--
+  Data-deletion request page for the Google Play Data safety form (2026-09-30).
+  Publish at https://aidexlab.org/bites/delete-data (same folder as /bites/privacy and /bites/terms).
+  Play requires: app/developer name · visible steps to request deletion · which data is deleted or kept and for how long.
+-->
+<style>
+  :root { --text:#221E2A; --soft:#574D66; --line:#DCD3EA; --accent:#6D3EE0; --bg:#FFFFFF; }
+  @media (prefers-color-scheme: dark) { :root { --text:#EFEAF6; --soft:#B9AED0; --line:#3A3150; --accent:#A98BF5; --bg:#1A1526; } }
+  html { background: var(--bg); }
+  body { margin: 0 auto; max-width: 720px; padding: 32px 16px 64px; color: var(--text); background: var(--bg);
+         font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 0 0 4px; }
+  h2 { font-size: 19px; margin: 32px 0 8px; }
+  .meta { color: var(--soft); margin: 0 0 24px; }
+  .box { border: 1px solid var(--line); border-radius: 14px; padding: 12px 20px; }
+  a { color: var(--accent); }
+  ol, ul { padding-left: 22px; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+  th { color: var(--soft); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<h1>Lingoop Bites — Delete your data</h1>
+<p class="meta">App: <strong>Lingoop Bites</strong> (Android) · Developer: <strong>AiDEX LAB</strong> · Updated September 30, 2026</p>
+
+<div class="box">
+  <p><strong>The short version</strong></p>
+  <ul>
+    <li>Lingoop Bites has no account and no sign-in. Your learning progress lives only on your phone.</li>
+    <li>You can erase everything the app stores in two taps, and reset the app's statistics identifier at the same time.</li>
+    <li>For anything held by Google's services (ads, app statistics, crash reports), email us and we will help.</li>
+  </ul>
+</div>
+
+<h2>1. Erase your data inside the app (recommended)</h2>
+<ol>
+  <li>Open Lingoop Bites and go to <strong>Settings</strong> (bottom right).</li>
+  <li>Tap <strong>Erase my progress</strong> and confirm.</li>
+</ol>
+<p>This deletes, immediately and on your phone: all studied words, review boxes and dates, your streak, daily round counts, saved rounds and settings. It also resets the random app-instance identifier used by app statistics, so earlier statistics can no longer be linked to your phone. Deleting the app has the same effect on the data stored on your phone.</p>
+
+<h2>2. Request deletion by email</h2>
+<p>If you want us to help remove data held by the services the app uses, write to <a href="mailto:lingoop.cs@gmail.com?subject=Lingoop%20Bites%20data%20deletion%20request">lingoop.cs@gmail.com</a> with the subject <strong>"Lingoop Bites data deletion request"</strong>. Tell us roughly when you used the app; you do not need to send any personal information. We reply within 14 days and confirm what was done.</p>
+
+<h2>3. What is deleted, what is kept, and for how long</h2>
+<table>
+  <tr><th>Data</th><th>Where it is</th><th>What happens</th></tr>
+  <tr><td>Learning progress, streak, settings, paused rounds</td><td>Your phone only</td><td>Deleted immediately by <em>Erase my progress</em> or by deleting the app. Never sent to us.</td></tr>
+  <tr><td>App statistics (app events, approximate location from IP, app-instance identifier) — Google Analytics for Firebase</td><td>Google, on our behalf</td><td>The identifier is reset by <em>Erase my progress</em>. Google keeps the remaining, no-longer-linked statistics under its retention settings (we use Google's default of 2 months for user-level data).</td></tr>
+  <tr><td>Crash reports (technical crash data with a random installation identifier) — Firebase Crashlytics</td><td>Google, on our behalf</td><td>Kept by Google for 90 days, then deleted automatically. Email us to request earlier removal.</td></tr>
+  <tr><td>Advertising data (advertising identifier, IP address, ad interactions) — Google AdMob</td><td>Google</td><td>Handled under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. You can reset or delete your advertising ID in your phone's settings (Settings → Google → Ads), and change your ad choices in the app under <em>Settings → Privacy &amp; ad choices</em>.</td></tr>
+  <tr><td>Purchase record for "Remove ads"</td><td>Google Play</td><td>Kept by Google Play with your Google account so the purchase can be restored. We never receive your payment details. To remove it, use your Google account's Play purchase history.</td></tr>
+</table>
+
+<h2>4. Questions</h2>
+<p>AiDEX LAB · <a href="mailto:lingoop.cs@gmail.com">lingoop.cs@gmail.com</a> · Full privacy policy: <a href="https://aidexlab.org/bites/privacy">aidexlab.org/bites/privacy</a></p>
+
+</body>
+</html>
