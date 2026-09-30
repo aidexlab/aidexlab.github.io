@@ -9,6 +9,7 @@
   Effective date 2026-09-28; no postal address; no personal officer name — privacy contact = AiDEX LAB + email (planner 9/28).
   §4 (Firebase Analytics + Crashlytics) is in the Android build since 2026-09-28.
   §5 (ad reports, iPhone) applies once the iOS build ships with Firebase.
+  Summary · §2 · §4 round counts (round_finished new · review · first_right · day, 9/28): factual draft — final wording by planner/legal before release.
 -->
 <style>
   :root { --text:#221E2A; --soft:#574D66; --line:#DCD3EA; --accent:#6D3EE0; --bg:#FFFFFF; }
@@ -34,7 +35,7 @@
   <p><strong>The short version</strong></p>
   <ul>
     <li>No account and no sign-in. We never ask for your name, email or phone number.</li>
-    <li>Your learning progress stays on your phone. We can't see it.</li>
+    <li>Your learning progress stays on your phone. App statistics include a few counts from each round you finish (section 4), not which words you studied.</li>
     <li>The app shows ads from Google AdMob. Google may use your device's advertising identifier to show and measure ads.</li>
     <li>You can change your ad choices at any time, and the app works the same either way.</li>
   </ul>
@@ -51,7 +52,7 @@
   <li>Your settings (sound, theme, listening questions, reminder time) and the deck you are learning</li>
   <li>A round you paused, so you can pick it up later</li>
 </ul>
-<p>This information is not sent to us. You can remove it with <em>Settings → Erase my progress</em>, or by deleting the app.</p>
+<p>This information is not sent to us, except the round counts in the app statistics described in section 4. You can remove it with <em>Settings → Erase my progress</em>, or by deleting the app. How to delete your data, step by step: <a href="https://aidexlab.org/bites/delete-data">aidexlab.org/bites/delete-data</a>.</p>
 
 <h2>3. Ads (Google AdMob)</h2>
 <p>The app is free and shows a short full-screen ad between some rounds, and an optional video ad you can choose to watch to keep a streak. Ads are provided by Google AdMob. To deliver ads, measure them and prevent fraud, Google may collect:</p>
@@ -71,7 +72,7 @@
 <h2>4. App statistics and crash reports (Google Firebase)</h2>
 <p>To find bugs and see which parts of the app work, we use Google Firebase Analytics and Firebase Crashlytics. They collect:</p>
 <ul>
-  <li>App events (for example, that a round was finished or that you switched decks), app version, device model and operating system version</li>
+  <li>App events (for example, that a round was finished — with how many new and review words it had, how many you got right on the first try, and which day of use it was since your first finished round — or that you switched decks), app version, device model and operating system version</li>
   <li>A random app instance identifier created for this installation (it is replaced when you use <em>Settings → Erase my progress</em>)</li>
   <li>Your approximate location (country or region), derived from your IP address</li>
   <li>When the app crashes, a technical crash report with a random installation identifier</li>
