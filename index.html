@@ -5,7 +5,7 @@
 <script>(function(){try{var l=(navigator.language||'').toLowerCase();if(location.pathname.match(/(^|\/)(index\.html)?$/)&&!sessionStorage.getItem('lang')&&l.indexOf('ko')!==0){sessionStorage.setItem('lang','en');location.replace('en.html');}}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AiDEX LAB — 낯선 곳에서 시작하는 사람을 돕습니다</title>
-<meta name="description" content="AiDEX LAB은 사람의 시작을 돕는 앱을 만듭니다. Lingoop(EPS-TOPIK 한국어 학습), Lingoop Bites(그림으로 배우는 한국어 단어), 말봄(하루 한 문장 자기돌봄), 그리고 앱 제작·AI 프롬프트 설계·AI 활용 코칭.">
+<meta name="description" content="AiDEX LAB은 사람의 시작을 돕는 앱을 만듭니다. Lingoop(EPS-TOPIK 한국어 학습), Lingoop Yakgwa(K-컬처에서 만난 한국어를 그림 카드로), 말봄(하루 한 문장 자기돌봄), 그리고 앱 제작·AI 프롬프트 설계·AI 활용 코칭.">
 <meta property="og:title" content="AiDEX LAB">
 <meta property="og:description" content="낯선 곳에서 시작하는 사람을 돕습니다. 말에서 시작합니다.">
 <meta property="og:type" content="website">
@@ -50,7 +50,7 @@ section[id]{scroll-margin-top:64px}
   <nav id="topnav" style="position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 32px;height:64px;background:rgba(11,15,26,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)">
     <a href="#top" style="font-family:'Orbit',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:-.5px">Ai<span style="color:#00B8D9">DEX</span> LAB</a>
     <div id="navlinks" style="display:flex;gap:28px;font-size:.88rem;color:#CBD5E1">
-      <a href="#lingoop">Lingoop</a><a href="#bites">Bites</a><a href="#malbom">말봄</a><a href="#services">Services</a><a href="#about">About</a>
+      <a href="#lingoop">Lingoop</a><a href="#yakgwa">Yakgwa</a><a href="#malbom">말봄</a><a href="#services">Services</a><a href="#about">About</a>
     </div>
     <div aria-label="Language" style="display:flex;gap:2px;padding:3px;border-radius:10px;border:1px solid rgba(255,255,255,.12);font-family:'JetBrains Mono',monospace;font-size:.76rem;letter-spacing:.5px"><span aria-current="true" style="padding:5px 10px;border-radius:7px;background:rgba(255,255,255,.1);color:#fff;font-weight:700">KO</span><a href="en.html" hreflang="en" style="padding:5px 10px;border-radius:7px;color:#94A3B8">EN</a></div>
   </nav>
@@ -67,9 +67,9 @@ section[id]{scroll-margin-top:64px}
         <div><div style="font-family:'Orbit',sans-serif;font-size:1.15rem;font-weight:700;color:#fff">Lingoop</div><div style="font-size:.9rem;color:#94A3B8;margin-top:3px">EPS-TOPIK 한국어 · 모국어 이중자막 18개 언어 · 오프라인</div></div>
         <div style="display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#00B8D9;font-weight:700;letter-spacing:1px;white-space:nowrap">01 <span style="color:#64748B">→</span></div>
       </a>
-      <a href="#bites" style="display:grid;grid-template-columns:56px 1fr auto;gap:22px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08)" data-cols>
-        <img src="bites-icon.png" alt="" width="56" height="56" style="width:56px;height:56px;border-radius:15px">
-        <div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.15rem;font-weight:800;letter-spacing:-.035em;color:#fff">Lingoop <span style="color:#A78BFA">Bites</span></div><div style="font-size:.9rem;color:#94A3B8;margin-top:3px">그림으로 한 입씩 익히는 일상 한국어 · 무료</div></div>
+      <a href="#yakgwa" style="display:grid;grid-template-columns:56px 1fr auto;gap:22px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08)" data-cols>
+        <img src="yakgwa-icon.png" alt="" width="56" height="56" style="width:56px;height:56px;border-radius:15px">
+        <div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.15rem;font-weight:800;letter-spacing:-.035em;color:#fff">Lingoop <span style="color:#A78BFA">Yakgwa</span></div><div style="font-size:.9rem;color:#94A3B8;margin-top:3px">K-컬처에서 만난 한국어, 그림으로 한 입씩 · 무료</div></div>
         <div style="display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#A78BFA;font-weight:700;letter-spacing:1px;white-space:nowrap">02 <span style="color:#64748B">→</span></div>
       </a>
       <a href="#malbom" style="display:grid;grid-template-columns:56px 1fr auto;gap:22px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08)" data-cols>
@@ -109,29 +109,30 @@ section[id]{scroll-margin-top:64px}
     </div>
   </section>
 
-  <!-- 02 LINGOOP BITES (라벤더 라이트) -->
-  <section id="bites" style="background:#F0EBF9;color:#1F1926">
+  <!-- 02 LINGOOP YAKGWA (라벤더 라이트) -->
+  <section id="yakgwa" style="background:#F0EBF9;color:#1F1926">
     <div style="max-width:1100px;margin:0 auto;padding:96px 32px;display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center" data-cols>
       <div style="display:flex;justify-content:center;align-items:flex-end;gap:0;position:relative;order:0">
         <div style="width:250px;height:567px;border-radius:26px;background:#FAF8FD;border:3px solid #2A2438;overflow:hidden;box-shadow:0 40px 80px rgba(59,27,110,.22);padding-top:12px">
-          <img src="bites-shot-home.png" alt="Lingoop Bites 홈 화면 — Your first 6 are ready, 음식 카드 6장" style="display:block;width:100%;height:100%;object-fit:contain;object-position:top">
+          <img src="yakgwa-shot-home.png" alt="Lingoop Yakgwa 홈 화면 — Your first 6 are ready, 음식 카드 6장" style="display:block;width:100%;height:100%;object-fit:contain;object-position:top">
         </div>
-        <img src="bites-loop.png" alt="마스코트 루프" width="150" height="150" style="width:150px;height:150px;margin-left:-40px;margin-bottom:-10px;position:relative">
+        <img src="yakgwa-loop.png" alt="마스코트 링굽, 약과를 들고" width="150" height="150" style="width:150px;height:150px;margin-left:-40px;margin-bottom:-10px;position:relative">
       </div>
       <div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:2px;color:#6D3EE0;text-transform:uppercase">02 — Lingoop Bites</div>
-        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.035em;color:#6D3EE0;margin-top:14px">Lingoop <span style="color:#1F1926">Bites</span> <span style="font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.14em;font-weight:500;color:#574D66;margin-left:8px">korean</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:2px;color:#6D3EE0;text-transform:uppercase">02 — Lingoop Yakgwa</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:800;letter-spacing:-.035em;color:#6D3EE0;margin-top:14px">Lingoop <span style="color:#1F1926">Yakgwa</span></div>
         <h2 style="font-family:'Figtree','Noto Sans KR',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:600;line-height:1.3;letter-spacing:-.02em;margin:10px 0 18px;color:#1F1926">한국어, 오늘은<br>딱 한 입만</h2>
-        <p style="font-size:1rem;line-height:1.85;color:#574D66;margin:0 0 14px;max-width:34em">Lingoop을 만든 팀의 두 번째 한국어 앱. 시험 준비가 아니라 드라마 한 편, 노래 한 곡, 서울 여행 한 번에 한국어가 궁금해진 사람을 위해 만들었습니다.</p>
-        <p style="font-size:1rem;line-height:1.85;color:#574D66;margin:0 0 26px;max-width:34em">열면 오늘 몫 6장이 그림으로 차려져 있습니다. 로그인도, 덱 고르기도 없이 바로 한 입. 2분이면 접시가 비고, 아직 출출하면 한 접시 더.</p>
+        <p style="font-size:1rem;line-height:1.85;color:#574D66;margin:0 0 14px;max-width:34em">Lingoop을 만든 팀의 두 번째 한국어 앱. 시험 준비가 아니라 K-드라마 한 편, K-팝 한 곡, 한식 한 그릇, 서울 여행 한 번에 한국어가 궁금해진 사람을 위해 만들었습니다.</p>
+        <p style="font-size:1rem;line-height:1.85;color:#574D66;margin:0 0 14px;max-width:34em">열면 오늘 몫 6장이 그림으로 차려져 있습니다. 로그인도, 덱 고르기도 없이 바로 한 입. 3분이면 접시가 비고, 아직 출출하면 한 접시 더.</p>
+        <p style="font-size:1rem;line-height:1.85;color:#574D66;margin:0 0 26px;max-width:34em">약과는 꿀로 만든 한국 과자, 그리고 "그 정도면 약과"의 그 약과 — 이 정도는 쉽다는 뜻입니다.</p>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:30px" data-cols>
-          <div style="background:#fff;border:1px solid #DDD3F0;border-radius:20px;padding:18px 16px"><div style="font-family:'Figtree',sans-serif;font-weight:600;font-size:.98rem;color:#1F1926">글자보다 그림이 먼저</div><div style="font-size:.84rem;line-height:1.65;color:#574D66;margin-top:6px">인사말·반찬·지하철·K-드라마까지 덱 20개, 전부 무료. 그림 4지선다와 플래시카드로 뜻을 먼저 만나고, 단어는 뒤따라옵니다.</div></div>
+          <div style="background:#fff;border:1px solid #DDD3F0;border-radius:20px;padding:18px 16px"><div style="font-family:'Figtree',sans-serif;font-weight:600;font-size:.98rem;color:#1F1926">글자보다 그림이 먼저</div><div style="font-size:.84rem;line-height:1.65;color:#574D66;margin-top:6px">K-푸드 · K-팝 · K-드라마 · K-뷰티 · K-여행 — 한국 문화에서 자꾸 듣던 그 말들을 주제별 덱으로, 전부 무료. 그림 4지선다와 플래시카드로 뜻을 먼저 만나고, 단어는 뒤따라옵니다.</div></div>
           <div style="background:#fff;border:1px solid #DDD3F0;border-radius:20px;padding:18px 16px"><div style="font-family:'Figtree',sans-serif;font-weight:600;font-size:.98rem;color:#1F1926">외울수록 멀어지는 상자</div><div style="font-size:.84rem;line-height:1.65;color:#574D66;margin-top:6px">맞힌 단어는 위 상자로 올라가 1·3·7·16·35일 뒤에 돌아옵니다. 잊을 때쯤 딱 한 번, 다시 식탁에.</div></div>
           <div style="background:#fff;border:1px solid #DDD3F0;border-radius:20px;padding:18px 16px"><div style="font-family:'Figtree',sans-serif;font-weight:600;font-size:.98rem;color:#1F1926">소리는 항상 챙겨 갑니다</div><div style="font-size:.84rem;line-height:1.65;color:#574D66;margin-top:6px">모든 단어에 한국어 음성. 지하철에서도, 비행기에서도 인터넷 없이 전부 동작합니다.</div></div>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
-          <a href="https://play.google.com/store/apps/details?id=com.aidexlab.lingoop.bites" target="_blank" rel="noopener" aria-label="Lingoop Bites를 Google Play에서 다운로드" style="display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 20px;border-radius:12px;background:#000;border:1px solid rgba(255,255,255,.14)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:21px;height:23px;flex:none"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#4285F4"></path><path d="M17.727 8.063L5.21.856a1 1 0 00-.506-.126l9.088 9.088 3.935-1.755z" fill="#EA4335"></path><path d="M17.727 15.937l-3.935-1.755L4.704 23.27c.16.003.322-.035.506-.126l12.517-7.207z" fill="#34A853"></path><path d="M21.182 10.475l-3.455-1.988-4.11 3.513 4.11 3.513 3.455-1.988c.812-.468.812-2.582 0-3.05z" fill="#FBBC04"></path></svg><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:7.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#94A3B8">Get it on</span><span style="font-size:14px;font-weight:700;color:#fff">Google Play</span></span></a>
-          <a href="#" aria-label="Lingoop Bites App Store" style="display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 20px;border-radius:12px;background:#000;border:1px solid rgba(255,255,255,.14)"><svg viewBox="0 0 384 512" aria-hidden="true" style="width:19px;height:23px;flex:none;color:#fff"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-36.8-2.8-77 21.3-91.7 21.3-15.5 0-51.1-20.3-79.1-20.3C61.2 141.2 3 184.8 3 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 62.6 126.1 114.5 124.5 27.2-.6 46.4-19.3 81.8-19.3 34.4 0 52.2 19.3 82.6 19.3 52.3-.8 97.4-82.1 109.6-118.9-69.9-32.9-86.2-95.9-86.2-97.6zM255.7 82.3c19.5-23.1 27.7-52.6 25.5-88.3-33.6 2.4-64.5 21.4-84.4 45.4-19 23.4-30.9 51.3-27.8 84.6 32.8 2.9 61.4-13.6 86.7-41.7z"></path></svg><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:7.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#94A3B8">Coming to</span><span style="font-size:14px;font-weight:700;color:#fff">App Store</span></span></a>
+          <a href="https://play.google.com/store/apps/details?id=com.aidexlab.lingoop.bites" target="_blank" rel="noopener" aria-label="Lingoop Yakgwa를 Google Play에서 다운로드" style="display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 20px;border-radius:12px;background:#000;border:1px solid rgba(255,255,255,.14)"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:21px;height:23px;flex:none"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#4285F4"></path><path d="M17.727 8.063L5.21.856a1 1 0 00-.506-.126l9.088 9.088 3.935-1.755z" fill="#EA4335"></path><path d="M17.727 15.937l-3.935-1.755L4.704 23.27c.16.003.322-.035.506-.126l12.517-7.207z" fill="#34A853"></path><path d="M21.182 10.475l-3.455-1.988-4.11 3.513 4.11 3.513 3.455-1.988c.812-.468.812-2.582 0-3.05z" fill="#FBBC04"></path></svg><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:7.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#94A3B8">Get it on</span><span style="font-size:14px;font-weight:700;color:#fff">Google Play</span></span></a>
+          <a href="#" aria-label="Lingoop Yakgwa App Store" style="display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 20px;border-radius:12px;background:#000;border:1px solid rgba(255,255,255,.14)"><svg viewBox="0 0 384 512" aria-hidden="true" style="width:19px;height:23px;flex:none;color:#fff"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-36.8-2.8-77 21.3-91.7 21.3-15.5 0-51.1-20.3-79.1-20.3C61.2 141.2 3 184.8 3 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 62.6 126.1 114.5 124.5 27.2-.6 46.4-19.3 81.8-19.3 34.4 0 52.2 19.3 82.6 19.3 52.3-.8 97.4-82.1 109.6-118.9-69.9-32.9-86.2-95.9-86.2-97.6zM255.7 82.3c19.5-23.1 27.7-52.6 25.5-88.3-33.6 2.4-64.5 21.4-84.4 45.4-19 23.4-30.9 51.3-27.8 84.6 32.8 2.9 61.4-13.6 86.7-41.7z"></path></svg><span style="display:flex;flex-direction:column;line-height:1.15;text-align:left"><span style="font-size:7.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#94A3B8">Coming to</span><span style="font-size:14px;font-weight:700;color:#fff">App Store</span></span></a>
         </div>
       </div>
     </div>
@@ -189,7 +190,7 @@ section[id]{scroll-margin-top:64px}
         <div style="display:grid;grid-template-columns:76px 1fr;gap:12px;font-size:.88rem;line-height:1.6;color:#CBD5E1"><b style="font-family:'JetBrains Mono',monospace;font-weight:500;color:#00B8D9;font-size:.8rem">~2021</b><span>IT 서비스 기획·PM — 중·대형 프로젝트 200여 개</span></div>
         <div style="display:grid;grid-template-columns:76px 1fr;gap:12px;font-size:.88rem;line-height:1.6;color:#CBD5E1"><b style="font-family:'JetBrains Mono',monospace;font-weight:500;color:#00B8D9;font-size:.8rem">2022</b><span>KSBOX1030 — 크몽에서 노션 제작·강의 시작</span></div>
         <div style="display:grid;grid-template-columns:76px 1fr;gap:12px;font-size:.88rem;line-height:1.6;color:#CBD5E1"><b style="font-family:'JetBrains Mono',monospace;font-weight:500;color:#00B8D9;font-size:.8rem">2025</b><span>AiDEX LAB 시작 · 파주시 사회적경제 창업 지원사업 선정</span></div>
-        <div style="display:grid;grid-template-columns:76px 1fr;gap:12px;font-size:.88rem;line-height:1.6;color:#CBD5E1"><b style="font-family:'JetBrains Mono',monospace;font-weight:500;color:#00B8D9;font-size:.8rem">2026</b><span>Lingoop · 말봄 출시 — Lingoop Bites 출시 준비</span></div>
+        <div style="display:grid;grid-template-columns:76px 1fr;gap:12px;font-size:.88rem;line-height:1.6;color:#CBD5E1"><b style="font-family:'JetBrains Mono',monospace;font-weight:500;color:#00B8D9;font-size:.8rem">2026</b><span>Lingoop · 말봄 출시 — Lingoop Yakgwa 출시 준비</span></div>
       </div>
     </div>
   </section>
@@ -201,10 +202,10 @@ section[id]{scroll-margin-top:64px}
         <div style="display:inline-flex;align-items:center;gap:12px;margin-top:22px"><img src="paju_logo_mono.svg" alt="파주시" width="64" height="36" style="width:64px;height:36px;display:block"><span style="font-size:.76rem;line-height:1.4;color:#64748B">2025 파주시 사회적경제<br>창업 지원사업 선정</span></div></div>
       <div style="display:flex;flex-direction:column;gap:12px;font-size:.85rem;color:#94A3B8"><b style="color:#fff;font-size:.8rem;letter-spacing:1px;text-transform:uppercase">Apps</b>
         <div style="display:flex;flex-direction:column;gap:3px"><a href="#lingoop">Lingoop</a><span style="font-size:.75rem;color:#64748B"><a href="https://ksbox1030.notion.site/Privacy-Policy-AidexLab-Korean-268570713a878013ac56d76300155af5" target="_blank" rel="noopener">개인정보처리방침</a></span></div>
-        <div style="display:flex;flex-direction:column;gap:3px"><a href="#bites">Lingoop Bites</a><span style="font-size:.75rem;color:#64748B"><a href="/bites/terms" target="_blank" rel="noopener">이용약관</a> · <a href="/bites/privacy" target="_blank" rel="noopener">개인정보처리방침</a></span></div>
+        <div style="display:flex;flex-direction:column;gap:3px"><a href="#yakgwa">Lingoop Yakgwa</a><span style="font-size:.75rem;color:#64748B"><a href="/bites/terms" target="_blank" rel="noopener">이용약관</a> · <a href="/bites/privacy" target="_blank" rel="noopener">개인정보처리방침</a></span></div>
         <div style="display:flex;flex-direction:column;gap:3px"><a href="https://malbom.kr" target="_blank" rel="noopener">말봄 · malbom.kr</a><span style="font-size:.75rem;color:#64748B"><a href="https://malbom.kr/terms.html" target="_blank" rel="noopener">이용약관</a> · <a href="https://malbom.kr/privacy.html" target="_blank" rel="noopener">개인정보처리방침</a></span></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:8px;font-size:.85rem;color:#94A3B8"><b style="color:#fff;font-size:.8rem;letter-spacing:1px;text-transform:uppercase">Contact</b><a href="mailto:aidexlab@gmail.com">aidexlab@gmail.com</a><a href="https://kmong.com/@KSBOX1030" target="_blank" rel="noopener">크몽 · KSBOX1030</a><a href="https://instagram.com/malbom.kr" target="_blank" rel="noopener">Instagram @malbom.kr</a></div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:.85rem;color:#94A3B8"><b style="color:#fff;font-size:.8rem;letter-spacing:1px;text-transform:uppercase">Contact</b><a href="mailto:aidexlab@gmail.com">aidexlab@gmail.com</a><a href="https://kmong.com/@KSBOX1030" target="_blank" rel="noopener">크몽 · KSBOX1030</a><a href="https://instagram.com/malbom.kr" target="_blank" rel="noopener">Instagram @malbom.kr</a><a href="https://www.youtube.com/@lingoopapp" target="_blank" rel="noopener">YouTube @lingoopapp</a></div>
     </div>
     <div style="margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.06);font-size:.78rem;color:#64748B;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span>© 2026 AiDEX LAB · aidexlab@gmail.com</span></div>
   </footer>
